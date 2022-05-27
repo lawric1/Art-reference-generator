@@ -1,9 +1,9 @@
 import "./Card.css";
 
-export function CardHeader() {
+export function CardHeader(props) {
 	return (
 		<header className="CardHeader">
-			<p>Name</p>
+			<p>{props.name}</p>
 			<button>Download</button>
 		</header>
 	);

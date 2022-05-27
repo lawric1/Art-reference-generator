@@ -3,11 +3,11 @@ import { CardImages } from "./CardImages";
 
 import "./Card.css";
 
-export function Card() {
+export function Card(props) {
 	return (
-		<section className="Card">
-			<CardHeader></CardHeader>
-			<CardImages></CardImages>
+		<section key={props.name} className="Card">
+			<CardHeader name={props.name} images={props.images}></CardHeader>
+			{/* <CardImages images={props.images}></CardImages> */}
 		</section>
 	);
 }

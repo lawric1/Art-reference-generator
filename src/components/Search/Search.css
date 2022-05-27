@@ -8,11 +8,11 @@
    background-color: rgb(118, 118, 157);
 }
 
-.SearchBar input {
-   width: 600px;
+.SearchBar .inputField {
+   width: 400px;
    height: 20px;
 }
 
-.SearchBar button {
-   height: 26px;
+.SearchBar .button {
+   height: 24px;
 }

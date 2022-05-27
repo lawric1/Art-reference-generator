@@ -1,23 +1,11 @@
 import "./Card.css";
 
-export function CardImages() {
+export function CardImages(props) {
 	return (
 		<section className="CardImages">
-			<div className="Image">
-				<p>Image</p>
-			</div>
-			<div className="Image">
-				<p>Image</p>
-			</div>
-			<div className="Image">
-				<p>Image</p>
-			</div>
-			<div className="Image">
-				<p>Image</p>
-			</div>
-			<div className="Image">
-				<p>Image</p>
-			</div>
+			{props.images.map((link) => {
+				return <img src={link}></img>;
+			})}
 		</section>
 	);
 }
