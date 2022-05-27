@@ -7,7 +7,7 @@ export function Card(props) {
 	return (
 		<section key={props.name} className="Card">
 			<CardHeader name={props.name} images={props.images}></CardHeader>
-			{/* <CardImages images={props.images}></CardImages> */}
+			<CardImages name={props.name} images={props.images}></CardImages>
 		</section>
 	);
 }

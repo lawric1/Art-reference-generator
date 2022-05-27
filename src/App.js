@@ -19,8 +19,14 @@ function App() {
 			}
 		);
 
+		let results = [];
 		let data = await response.json();
-		// Change data structure in the api
+
+		for (let [key, value] of Object.entries(data)) {
+			results.push([key, value]);
+		}
+
+		setSearchResults(results);
 	}
 
 	return (
@@ -32,9 +38,9 @@ function App() {
 					{searchResults.map((result) => {
 						return (
 							<Card
-								key={result.key}
-								name={result.key}
-								images={result.value}
+								key={result[0]}
+								name={result[0]}
+								images={result[1]}
 							/>
 						);
 					})}

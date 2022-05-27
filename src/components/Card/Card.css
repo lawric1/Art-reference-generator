@@ -28,6 +28,13 @@
 }
 
 .CardImages img {
-   width: 100px;
-   height: 100px;
+   flex: 1; 
+   
+   margin: 6px;
+
+   width: 150px;
+   height: 150px;
+   
+   border-radius: 10px;
+   overflow: auto;
 }
