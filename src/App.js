@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { NavBar } from "./components/NavBar/NavBar";
+import { SearchBar } from "./components/Search/SearchBar";
+import { CardContainer } from "./components/Card/CardContainer";
+import { Card } from "./components/Card/Card";
+
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [searchResults, setSearchResults] = useState([]);
+
+	async function getSearchResults(input) {
+		const response = await fetch("www.google.com/post", {
+			method: "POST",
+			body: JSON.stringify({ input }),
+		});
+	}
+
+	return (
+		<div className="App">
+			<NavBar></NavBar>
+			<main>
+				<SearchBar callback={getSearchResults} />
+				<CardContainer>
+					<Card></Card>
+					<Card></Card>
+					<Card></Card>
+				</CardContainer>
+			</main>
+		</div>
+	);
 }
 
 export default App;

@@ -1,0 +1,33 @@
+.CardContainer {
+   height: 500px;
+}
+
+.Card {
+   margin: 8px 8px;
+   background-color: rgba(95, 158, 160, 0.437);
+
+   border-radius: 10px;
+}
+
+.CardHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding: 0 8px;
+
+   background-color: rgba(0, 0, 0, 0.196);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+
+}
+.CardImages {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.Image {
+   width: 100px;
+   height: 100px;
+}
