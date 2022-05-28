@@ -27,12 +27,10 @@ export function SearchBar(props) {
 			<input
 				className="inputField"
 				type="text"
-				placeholder="Separate words by comma: night sky, lineart, concept"
+				placeholder="split words by comma: rock, tree, water"
 				onChange={updateInput}
 				spellCheck="false"
 			/>
-
-			<input className="button" type="submit" value="Search" />
 		</form>
 	);
 }

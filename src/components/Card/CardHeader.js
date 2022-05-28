@@ -1,10 +1,12 @@
+import { BiDownload } from "react-icons/bi";
+
 import "./Card.css";
 
 export function CardHeader(props) {
 	return (
 		<header className="CardHeader">
-			<p>{props.name}</p>
-			<button>Download</button>
+			<p className="Name">{props.name}</p>
+			<BiDownload size={32} className="Download"></BiDownload>
 		</header>
 	);
 }

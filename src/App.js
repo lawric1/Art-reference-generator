@@ -1,4 +1,5 @@
 import { NavBar } from "./components/NavBar/NavBar";
+
 import { SearchBar } from "./components/Search/SearchBar";
 import { CardContainer } from "./components/Card/CardContainer";
 import { Card } from "./components/Card/Card";
