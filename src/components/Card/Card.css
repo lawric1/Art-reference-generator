@@ -36,18 +36,30 @@
 
 .CardImages {
    display: flex;
-   justify-content: space-between;
-   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 
 .CardImages img {
-   flex: 1; 
+   flex-grow: 1; 
    
    margin: 6px;
 
-   width: 150px;
-   height: 150px;
-   
+   width: 360px;
+   height: 420px;
+
    border-radius: 10px;
    overflow: auto;
+}
+
+@media only screen and (max-width: 800px) {
+   .CardImages {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+
+   .CardImages img {
+      width: 240px;
+   }
 }

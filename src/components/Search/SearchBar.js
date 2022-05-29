@@ -18,7 +18,7 @@ export function SearchBar(props) {
 		// callback function is "getSearchResults" from the App component.
 		let queries = input.split(",");
 		props.callback({ items: queries });
-		// preventDefault is used so the page don't reload when the submit button is clicked.
+		// preventDefault is used so the page don't reload when the submit event trigger.
 		event.preventDefault();
 	}
 

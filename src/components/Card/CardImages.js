@@ -4,6 +4,7 @@ export function CardImages(props) {
 	let imageLinks = props.images;
 	let selectedLinks = [];
 
+	// Pick 6 images from all the fetched images
 	while (selectedLinks.length !== 6) {
 		let link = imageLinks[Math.floor(Math.random() * imageLinks.length)];
 

@@ -11,6 +11,7 @@ import "./App.css";
 function App() {
 	const [searchResults, setSearchResults] = useState([]);
 
+	// Send a post request to the api with the input text from search bat. Api will return image links for each search query
 	async function getSearchResults(input) {
 		const response = await fetch(
 			"https://image-scraper-api.herokuapp.com/post",
@@ -32,7 +33,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<NavBar></NavBar>
+			<NavBar />
 			<main>
 				<SearchBar callback={getSearchResults} />
 				<CardContainer>
@@ -52,3 +53,14 @@ function App() {
 }
 
 export default App;
+
+// TODO
+// Download link function
+// Logo
+// Page Icon
+// Readme page
+// Clean css
+// Responsive page
+// Limit search queries
+// Custom input field, add boxes for each query
+// Ping Api on page load
