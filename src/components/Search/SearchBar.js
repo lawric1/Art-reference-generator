@@ -2,6 +2,14 @@ import { useState } from "react";
 
 import "./Search.css";
 
+function filterInput(input, itemLimit) {
+	let items = input.split(",");
+	items = items.map((item) => item.trim());
+	items = items.filter((item) => item.length > 0);
+
+	return items.slice(0, itemLimit);
+}
+
 export function SearchBar(props) {
 	const [input, setInput] = useState("");
 
@@ -16,8 +24,9 @@ export function SearchBar(props) {
 		}
 
 		// callback function is "getSearchResults" from the App component.
-		let queries = input.split(",");
+		let queries = filterInput(input, 4);
 		props.callback({ items: queries });
+
 		// preventDefault is used so the page don't reload when the submit event trigger.
 		event.preventDefault();
 	}

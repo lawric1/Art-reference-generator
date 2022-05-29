@@ -59,8 +59,5 @@ export default App;
 // Logo
 // Page Icon
 // Readme page
-// Clean css
-// Responsive page
-// Limit search queries
 // Custom input field, add boxes for each query
 // Ping Api on page load
