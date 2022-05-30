@@ -56,8 +56,12 @@ export default App;
 
 // TODO
 // Download link function
+// Download and zip all files in backend
+// Save zip in temp folder
+// Create endpoint in api to retrieve file
+// After a few minutes, delete file
+// Ping Api on page load
 // Logo
 // Page Icon
 // Readme page
 // Custom input field, add boxes for each query
-// Ping Api on page load
